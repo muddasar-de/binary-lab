@@ -1,0 +1,136 @@
+.header__container {
+  width: var(--lg-width);
+  margin: auto;
+  overflow: hidden;
+}
+
+.header__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.content__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  /* align-items: center; */
+}
+
+.content__description h1 {
+  font-size: 3rem;
+  font-weight: bolder;
+  line-height: 3rem;
+}
+.content__description small {
+  /* margin-top: 0.8rem; */
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.subscribe__container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+}
+.subscribe__container input {
+  width: 70%;
+  background-color: var(--color-blog);
+  padding: 0.8rem 1.5rem;
+  color: var(--color-text);
+  font-size: 1rem;
+  outline: none;
+  border: 1px solid transparent;
+}
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: var(--color-text);
+}
+.subscribe__container input:focus {
+  border-color: var(--color-btn-bg);
+}
+
+.people {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.content__graphics img {
+  width: 36rem;
+  display: block;
+  margin: auto;
+}
+
+.header__client__logos {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin: 5rem 0;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ------------------Media Quries For Medium Screens----------------- */
+
+@media screen and (max-width: 1024px) {
+  .header__container {
+    width: var(--md-width);
+  }
+  .header__content {
+    grid-template-columns: 1fr;
+    grid-auto-flow: dense;
+  }
+  .header__content div:nth-last-of-type(2) {
+    order: 1;
+  }
+}
+
+/* ------------------Media Quries For Small Screens----------------- */
+
+@media screen and (max-width: 600px) {
+  .header__container {
+    width: var(--sm-width);
+  }
+  .header__content {
+    grid-template-columns: 1fr;
+  }
+  .content__description {
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  .content__description h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+  .content__description small {
+    /* margin-top: 0.8rem; */
+    font-size: 0.8rem;
+    text-align: center;
+    color: var(--color-white);
+  }
+  .content__graphics img {
+    display: none;
+  }
+
+  .subscribe__container input {
+    width: 70%;
+    padding: 0.8rem 0.8rem;
+    font-size: 1rem;
+    outline: none;
+    border: 2px solid transparent;
+  }
+
+  .btn {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .people {
+    flex-direction: column;
+  }
+}
