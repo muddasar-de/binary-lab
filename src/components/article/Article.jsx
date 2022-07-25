@@ -4,7 +4,7 @@ const Article = ({ featuredImg, date, title, link }) => {
   return (
     <div className='article__container'>
       <div className='article__content'>
-        <img src={featuredImg} alt='Featured Image' />
+        <img src={featuredImg} alt='Featured_image' />
         <div className='article__info'>
           <div className='article__text'>
             <small>{date}</small>
